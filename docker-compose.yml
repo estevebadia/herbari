@@ -1,0 +1,11 @@
+version: "3.2"
+
+services:
+  web:
+    image: nginx:stable-alpine
+    ports:
+     - 3001:80 
+    restart: unless-stopped
+    volumes:
+      - "./docker/localhost.conf:/etc/nginx/conf.d/localhost.conf:ro"
+      - "./dist/spa:/usr/share/nginx/html:ro"

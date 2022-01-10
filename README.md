@@ -23,5 +23,14 @@ quasar dev
 ### Build
 ```bash
 quasar build
-
+tar -cvzf herbari.tar.gz dist docker docker-compose.yml
+```
+### Run production
+```bash
+mkdir herbari
+mv herbari.tar.gz herbari/
+cd herbari
+tar -xvzf herbari.tar.gz
+rm herbari.tar.gz
+docker-compose up -d
 ```
