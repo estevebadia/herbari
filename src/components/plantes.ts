@@ -10,7 +10,8 @@ export interface Planta {
   famFQ: string
   nom: string
   fam: string
-  img1200: string,
+  nomVulgar: string
+  img1200: string
   img: string
   search: string
   linkMNB: string
@@ -51,7 +52,7 @@ export async function getPlantes(): Promise<Planta[]> {
             return
           }
           // skip rows with "amagar"=true
-          if (record.length >= 10 && record[9] && 'true' == record[9].toLowerCase()) {
+          if (record.length >= 11 && record[10] && 'true' == record[10].toLowerCase()) {
             return
           }
           const item = {
@@ -62,14 +63,14 @@ export async function getPlantes(): Promise<Planta[]> {
             famFQ: record[4],
             nom: record[5],
             fam: record[6],
-            linkMNB: record[7],
-            comentari: record[8]
+            nomVulgar: record[7],
+            linkMNB: record[8],
+            comentari: record[9]
           } as Planta
           item.code = slugify(item.nomFQ)
           item.img = '/images/' + item.code + '.jpg'
           item.img1200 = '/images-1200/' + item.code + '.jpg'
-          item.search = [item.nomFQ, ' ', item.nom, ' ', item.fam, ' ', item.famFQ].join('').toLowerCase()
-          //item.img = imagePath(item)
+          item.search = normalizeQuery([item.nomFQ, item.nom, item.fam, item.famFQ, item.nomVulgar].join(' '))
           plantes.push(item)
           index.set(item.code, i-1)
         })
@@ -86,6 +87,13 @@ export async function getPlanta(code: string): Promise<Planta> {
     return plantes[i]
   }
   throw `Could not find ${code}.`;
+}
+
+export function normalizeQuery(text: string): string {
+  return slugify(text, {
+    lower: true,
+    trim: true
+  });
 }
 
 
