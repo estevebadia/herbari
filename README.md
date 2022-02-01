@@ -39,6 +39,10 @@ docker-compose up -d
 ```
 rsync -r dist/spa webadmin@herbarifontiquer.cat:/opt/herbari/dist 
 ```
+and eventually
+```
+rsync -r docker webadmin@herbarifontiquer.cat:/opt/herbari
+```
 ### Auto-update herbari.csv from git
 ```
 $ sh docker/update-csv.sh
