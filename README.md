@@ -34,3 +34,16 @@ tar -xvzf herbari.tar.gz
 rm herbari.tar.gz
 docker-compose up -d
 ```
+
+### Update code after build
+```
+rsync -r dist/spa webadmin@herbarifontiquer.cat:/opt/herbari/dist 
+```
+### Auto-update herbari.csv from git
+```
+$ sh docker/update-csv.sh
+``` 
+or visit http://herbarifontiquer.cat:9000/hooks/herbari-csv
+
+
+
