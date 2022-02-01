@@ -1,6 +1,6 @@
 # Herbari del Bages - Font i Quer
 
-Web de l'herbari de la flora del Bages que va fer Pius Font i Quer entre 1909 i 1912. Treball fet per a l'ICHN Bages.
+Web de l'herbari de la flora del Bages que va fer Pius Font i Quer entre 1909 i 1912. Treball fet per a l'ICHN Bages. Online a [https://herbarifontiquer.cat](https://herbarifontiquer.cat)
 
 ## Obtenir fotos
  - Baixar les fotos del Google drive i col·locar-les al directori `public/original`
