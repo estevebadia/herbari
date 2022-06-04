@@ -8,7 +8,7 @@ Web de l'herbari de la flora del Bages que va fer Pius Font i Quer entre 1909 i 
  - Redimensionar totes les fotos a 1200x1600 i posarles a `public/images-1200`.
 
 ## Obtenir dades
- - Actualitzar l'arxiu `public/herbari.csv` a partir de l'`.xlsx` del Google drive.
+ - Actualitzar l'arxiu `public/herbari.csv` a partir de l'arxiu `Plantes herbari del Bages Font i Quer` del Google drive.
 
 ## Baixar dependències
 ```bash
