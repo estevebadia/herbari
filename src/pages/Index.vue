@@ -32,7 +32,7 @@ Pius Font i Quer diposità l’Herbari del Bages al Centre Excursionista de la C
 L’any 1914, Font i Quer publicava el seu treball Ensayo Fitotopográfico de Bages, la flora del Bages que li valdria el títol de doctor en farmàcia. L’Herbari del Bages constitueix també en bona mesura el recull de mostres que avalen i permeten contrastar les dades florístiques presentades a l’Ensayo Fitotopográfico de Bages.
 </p>
 <p>
-L’any 2021, el CECB va decidir donar l’Herbari del Bages a l’Ajuntament de Manresa qui, al seu torn, pretén cedir-lo en comodat a l’Institut Botànic de Barcelona.
+L’any 2021, el CECB va decidir donar l’Herbari del Bages a l’Ajuntament de Manresa qui, al seu torn, pretén cedir-lo en comodat al Centre de Documentació de la Biodiversitat Vegetal (CeDocBiV), un servei científic integrat en el Centre de Recursos per a l’Aprenentatge i la Investigació (CRAI) de la Universitat de Barcelona. L’octubre del 2024 es va materialitzar aquesta cessió. Agraïm a la direcció i al personal del CeDocBiV la seva predisposició per integrar l’Herbari del Bages a les col·leccions que manté, assegurant-ne la conservació i eixamplant les possibilitats d’ús en recerca botànica i en recerca sobre la història de l’estudi de la botànica a Catalunya.
 </p>
 
 <div class="text-h6">L’HERBARI DIGITAL</div>
