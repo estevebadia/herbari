@@ -1,11 +1,14 @@
-version: "3.2"
-
 services:
   web:
-    image: nginx:stable-alpine
+    image: ${NGINX_IMAGE}
     ports:
-     - 3001:80 
+    - ${BIND_ADDRESS:-127.0.0.1}:${HTTP_PORT:-3001}:80
     restart: unless-stopped
     volumes:
-      - "./docker/localhost.conf:/etc/nginx/conf.d/localhost.conf:ro"
-      - "./dist/spa:/usr/share/nginx/html:ro"
+    - ./docker/localhost.conf:/etc/nginx/conf.d/localhost.conf:ro
+    - ./dist/spa:/usr/share/nginx/html:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'

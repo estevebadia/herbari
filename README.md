@@ -51,3 +51,16 @@ or visit http://herbarifontiquer.cat:9000/hooks/herbari-csv
 
 
 
+
+
+## VPS deployment
+
+The production checkout is `/opt/herbari`. Its ignored `dist/spa` directory
+contains the deployed build plus the large image collection. Restore it from
+backup, copy `.env.example` to `.env`, and run `docker compose up -d`.
+HTTP listens on localhost:3001 behind the shared HTTPS proxy. No database is used.
+Keep `dist/spa` with backups; Git deliberately excludes generated builds/images.
+
+The host webhook's `herbari-csv` hook runs `docker/update-csv.sh` to update the
+deployed CSV. Preserve that hook and its authentication rule. Operating this
+stack does not require the retired Komunitin/ICES deployment hooks.
